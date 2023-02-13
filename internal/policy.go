@@ -103,10 +103,14 @@ func findRootPolicy(policies *[]Policy) Policy {
 
 func findChildPolicies(policies *[]Policy, policyId string) []Policy {
 	_policies := []Policy{}
-	for i, policy := range *policies {
+
+	var idx = 0
+	for _, policy := range *policies {
 		if policy.ParentPolicyId == policyId {
 			_policies = append(_policies, policy)
-			*policies = remove(*policies, i)
+			*policies = remove(*policies, idx)
+		} else {
+			idx++
 		}
 	}
 	return _policies
