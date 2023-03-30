@@ -1,6 +1,6 @@
 if [[ $1 == "" ]]
 then
-    VER=$(curl https://api.github.com/repos/michalfila/go-ieftool/releases/latest | grep "tag_name" | awk '{print $2}' | sed 's|[\"\,]*||g')
+    VER=$(curl https://api.github.com/repos/HomeServeDigitalDevelopmentUK/IEFTool/releases/latest | grep "tag_name" | awk '{print $2}' | sed 's|[\"\,]*||g')
 else
     VER=v$1
 fi
@@ -33,7 +33,7 @@ fi
 echo DETECTED OS $OS
 echo DETECTED ARCH $ARCH
 echo VERSION $VER
-DOWNLOAD_URL=https://github.com/michalfila/go-ieftool/releases/download/$VER/ieftool-$OS-$ARCH
+DOWNLOAD_URL=https://github.com/HomeServeDigitalDevelopmentUK/IEFTool/releases/download/$VER/ieftool-$OS-$ARCH
 
 echo "Installing ieftool from $DOWNLOAD_URL"
 

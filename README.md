@@ -50,7 +50,7 @@ These policies are then batched by their hierarchy in the tree, as well as their
 Install via curl
 
 ```
-curl https://raw.githubusercontent.com/judedaryl/go-ieftool/main/install.sh | bash
+curl https://raw.githubusercontent.com/HomeServeDigitalDevelopmentUK/IEFTool/main/install.sh | bash
 ```
 
 # Commands
